@@ -1,0 +1,17 @@
+{% extends 'forwork/layaut.html' %}
+
+{% block tcontent %}
+
+{% endblock %}
+
+{% block bcontent %}
+    {% for el in role %}
+                <div class="module-border-wrap">
+                        <div class="users">
+                                <p>{{el.id}}: {{el.Name}} </p>
+                                <p>Категория: {{el.Kategor}}</p>
+                            <a href="{% url 'updateRole' el.id %}" class="btn btn-warning">Обновить данные</a>
+                        </div>
+                </div>
+        {% endfor %}
+{% endblock %}

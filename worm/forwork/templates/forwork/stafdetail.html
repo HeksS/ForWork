@@ -1,0 +1,17 @@
+{% extends 'forwork/layaut.html' %}
+
+{% block tcontent %}{% endblock %}
+
+{% block bcontent %}
+
+
+                <div class="module-border-wrap">
+                        <div class="users">
+                                <h1>Сотрудник:</h1>
+                                <p>{{staf.FIO}}, {{staf.Post.Name}} </p>
+                                <p>Пол: {{staf.Gender}} {{staf.Age}} лет</p>
+                                 <a href="{% url 'updateStaf' staf.id %}" class="btn btn-warning">Обновить данные</a>
+                        </div>
+                </div>
+
+{% endblock %}

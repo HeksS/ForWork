@@ -1,0 +1,20 @@
+{% extends 'forwork/layaut.html' %}
+
+{% block tcontent %}Добавление сотрудников{% endblock %}
+
+{% block bcontent %}
+        <div class="module-create">
+            <div class="users">
+                <h1> Добавление роли</h1>
+                <form method="post" >
+                    {% csrf_token %}
+                    {{ form.FIO }}<br>
+                    {{ form.Gender }}<br>
+                    {{ form.Age }}<br>
+                    {{ form.Post}}<br>
+                        <span> {{error}}</span>
+                    <button class="btn btn-success" margin-top="5px" type="submit">Сохранить</button>
+                </form>
+            </div>
+        </div>
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends 'forwork/layaut.html' %}
+
+{% block tcontent %} Список должностей{% endblock %}
+
+{% block bcontent %}
+
+        {% for el in people %}
+                <div class="module-border-wrap">
+                        <div class="users">
+                                <p>{{el.FIO}}, {{el.Post.Name}} </p>
+                                <p>Пол: {{el.Gender}} {{el.Age}} лет {{el.Post.Kategor}}</p>
+                                <a href="{% url 'detailStaf' el.id %}" class="btn btn-warning">Перейти к карточке</a>
+                        </div>
+                </div>
+        {% endfor %}
+{% endblock %}
